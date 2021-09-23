@@ -1,0 +1,86 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include b(loading-parent) {
+  @include m(relative) {
+    position: relative !important;
+  }
+
+  @include m(hidden) {
+    overflow: hidden !important;
+  }
+}
+
+@include b(loading-mask) {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  @include when(fullscreen) {
+    position: fixed;
+  }
+}
+
+@include b(loading-spinner) {
+  position: absolute;
+  top: 50%;
+  margin-top: -#{$--loading-spinner-size / 2};
+  width: 100%;
+  text-align: center;
+
+  @include b(loading-text) {
+    color: $--color-primary;
+    margin: 3px 0;
+    font-size: $--font-size-base;
+  }
+
+  .circular {
+    width: $--loading-spinner-size;
+    height: $--loading-spinner-size;
+    animation: loading-rotate 2s linear infinite;
+  }
+
+  .path {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: $--color-primary;
+    stroke-linecap: round;
+    animation: loading-dash 1.5s ease-in-out infinite;
+  }
+
+  i {
+    color: $--color-primary;
+    font-size: 24px;
+  }
+}
+
+.#{$namespace}-loading-fade-enter-from,
+.#{$namespace}-loading-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes loading-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40px;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120px;
+  }
+}

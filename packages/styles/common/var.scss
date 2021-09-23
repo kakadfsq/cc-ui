@@ -1,0 +1,175 @@
+/* ------------------------ Color ------------------------ */
+$--color-white: #ffffff !default;
+$--color-dark: #0b132b !default;
+$--color-primary: #1b98e0 !default;
+$--color-success: #40916c !default;
+$--color-warning: #fca311 !default;
+$--color-danger: #e63946 !default;
+$--color-info: #6c757d !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+
+$--color-primary-light: mix($--color-white, $--color-primary, 80%) !default;
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+
+$--color-primary-lighter: mix($--color-white, $--color-primary, 90%) !default;
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+// font color
+$--color-text-primary: rgba(25, 69, 104, 1) !default;
+$--color-text-regular: rgba(25, 69, 104, 0.7) !default;
+$--color-text-secondary: rgba(25, 69, 104, 0.5) !default;
+$--color-text-placeholder: rgba(25, 69, 104, 0.3) !default;
+
+$--popup-close-color: $--color-text-secondary !default;
+$--popup-close-hover-color: $--color-text-regular !default;
+/* ------------------------ Typography ------------------------ */
+$--font-path: '../theme/fonts' !default;
+
+// fontSize
+$--font-size-extra-small: 12px !default;
+$--font-size-small: 13px !default;
+$--font-size-base: 14px !default;
+$--font-size-medium: 16px !default;
+$--font-size-large: 18px !default;
+$--font-size-extra-large: 20px !default;
+
+// lineHeight
+$--font-line-height: 1 !default;
+$--font-line-height-compact: 1.3 !default;
+$--font-line-height-base: 1.5 !default;
+$--font-line-height-Loose: 1.7 !default;
+
+// fontWeight
+$--font-weight-slim: 100 !default;
+$--font-weight-base: 400 !default;
+$--font-weight-bold: 500 !default;
+$--font-weight-bolder: 700 !default;
+
+
+/* ------------------------ Border 粗 ------------------------ */
+// color
+$--border-color-base: mix($--color-white, $--color-info, 60%) !default;
+$--border-color-light: mix($--color-white, $--color-info, 70%) !default;
+$--border-color-lighter: mix($--color-white, $--color-info, 80%) !default;
+$--border-color-extra-light: mix($--color-white, $--color-info, 90%) !default;
+
+// base
+$--border-width-base: 1px !default;
+$--border-width-thick: 2px !default;
+$--border-style-solid: solid !default;
+$--border-style-dashed: dashed !default;
+$--border-base: $--border-width-base $--border-style-solid $--border-color-base !default;
+
+// borderRadius
+$--border-radius-base: 4px !default;
+$--border-radius-small: 2px !default;
+$--border-radius-zero: 0 !default;
+$--border-radius-circle: 100% !default;
+
+// Box-shadow
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+
+/* ------------------------ Button ------------------------ */
+// base
+$--button-font-size: $--font-size-base !default;
+$--button-font-wight: $--font-weight-base !default;
+$--button-border-radio: $--border-radius-base !default;
+$--button-padding-vertical: 12px !default;
+$--button-padding-horizontal: 20px !default;
+// medium
+$--button-medium-font-size: $--font-size-base !default;
+$--button-medium-font-wight: $--font-weight-base !default;
+$--button-medium-border-radio: $--border-radius-base !default;
+$--button-medium-padding-vertical: 10px !default;
+$--button-medium-padding-horizontal: 18px !default;
+// small
+$--button-small-font-size: $--font-size-extra-small !default;
+$--button-small-font-wight: $--font-weight-base !default;
+$--button-small-border-radio: $--border-radius-small !default;
+$--button-small-padding-vertical: 8px !default;
+$--button-small-padding-horizontal: 15px !default;
+// mini
+$--button-mini-font-size: $--font-size-extra-small !default;
+$--button-mini-font-wight: $--font-weight-base !default;
+$--button-mini-border-radio: $--border-radius-small !default;
+$--button-mini-padding-vertical: 6px !default;
+$--button-mini-padding-horizontal: 12px !default;
+// color
+// default
+$--button-default-font-color: $--color-text-regular !default;
+$--button-default-background-color: $--color-white !default;
+$--button-default-border-color: $--border-color-base !default;
+// disabled
+$--button-disabled-font-color: $--color-text-placeholder !default;
+$--button-disabled-background-color: $--color-white !default;
+$--button-disabled-border-color: $--border-color-lighter !default;
+// primary
+$--button-primary-font-color: $--color-white !default;
+$--button-primary-background-color: $--color-primary !default;
+$--button-primary-border-color: $--color-primary !default;
+// success
+$--button-success-font-color: $--color-white !default;
+$--button-success-background-color: $--color-success !default;
+$--button-success-border-color: $--color-success !default;
+// warning
+$--button-warning-font-color: $--color-white !default;
+$--button-warning-background-color: $--color-warning !default;
+$--button-warning-border-color: $--color-warning !default;
+// danger
+$--button-danger-font-color: $--color-white !default;
+$--button-danger-background-color: $--color-danger !default;
+$--button-danger-border-color: $--color-danger !default;
+// info
+$--button-info-font-color: $--color-white !default;
+$--button-info-background-color: $--color-info !default;
+$--button-info-border-color: $--color-info !default;
+
+$--button-hover-tint-percent: 20% !default;
+$--button-active-shade-percent: 10% !default;
+
+/* ------------------------ Input ------------------------ */
+$--input-height: 40px !default;
+
+/* ------------------------ Notification ------------------------ */
+$--notification-width: 330px !default;
+$--notification-padding: 14px 26px 14px 13px !default;
+$--notification-radius: 8px !default;
+$--notification-shadow: $--box-shadow-light !default;
+$--notification-border-color: $--border-color-extra-light !default;
+
+$--notification-margin-left: 13px !default;
+$--notification-margin-right: 16px !default;
+
+$--notification-title-font-size: $--font-size-medium !default;
+$--notification-title-font-weight: $--font-weight-bolder !default;
+$--notification-title-color: $--color-dark !default;
+$--notification-content-font-size: $--font-size-base !default;
+$--notification-content-font-weight: $--font-weight-base !default;
+$--notification-content-color: $--color-info !default;
+$--notification-icon-size: 24px !default;
+$--notification-close-color: $--popup-close-color !default;
+$--notification-close-hover-color: $--popup-close-hover-color !default;
+$--notification-success-color: $--color-success !default;
+$--notification-info-color: $--color-info !default;
+$--notification-warning-color: $--color-warning !default;
+$--notification-danger-color: $--color-danger !default;
+
+/* ------------------------ Loading ------------------------ */
+$--loading-spinner-size: 42px !default;
+

@@ -1,0 +1,79 @@
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include b(notification) {
+  display: flex;
+  width: $--notification-width;
+  padding: $--notification-padding;
+  border-radius: $--notification-radius;
+  box-sizing: border-box;
+  border: 1px solid $--notification-border-color;
+  position: fixed;
+  background-color: $--color-white;
+  box-shadow: $--notification-shadow;
+  transition: opacity .3s, transform .3s, left .3s, right .3s, top .3s, bottom .3s;
+  overflow: hidden;
+  z-index: 9999;
+  &.right {
+    right: 16px;
+  }
+  &.left {
+    left: 16px;
+  }
+
+  @include e(container) {
+    margin-left: $--notification-margin-left;
+    margin-right: $--notification-margin-right;
+  }
+
+  @include e(title) {
+    font-size: $--notification-title-font-size;
+    font-weight: $--notification-title-font-weight;
+    color: $--notification-title-color;
+    margin: 0;
+  }
+
+  @include e(content) {
+    font-size: $--notification-content-font-size;
+    font-weight: $--notification-content-font-weight;
+    color: $--notification-content-color;
+    margin-top: 6px;
+    text-align: justify;
+    p {
+      margin: 0;
+    }
+  }
+
+  @include e(closeBtn) {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: $--notification-close-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $--notification-close-hover-color;
+    }
+  }
+
+  @include e(icon) {
+    font-size: $--notification-icon-size;
+  }
+
+  .#{$namespace}-icon-check-circle-fill {
+    color: $--notification-success-color;
+  }
+
+  .#{$namespace}-icon-warning-circle-fill {
+    color: $--notification-warning-color;
+  }
+
+  .#{$namespace}-icon-info-circle-fill {
+    color: $--notification-info-color;
+  }
+
+  .#{$namespace}-icon-close-circle-fill {
+    color: $--notification-danger-color;
+  }
+}
+

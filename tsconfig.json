@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "types": [""],
+    "paths": {
+      "@examples/*": [
+        "examples/*"
+      ],
+      "@packages/*": [
+        "packages/*"
+      ],
+      "@components/*": [
+        "packages/components/*"
+      ],
+      "@styles/*": [
+        "packages/styles/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
