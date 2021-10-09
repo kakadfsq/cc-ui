@@ -3,8 +3,9 @@ import CcButton from "./components/button/index";
 import CcButtonGroup from "@components/button-group/index";
 import CcNotify from "@components/notify/index";
 import CcLoading from "@components/loading/index";
+import CcInput from "@components/input/index";
 
-const components = [CcButton, CcButtonGroup];
+const components = [CcButton, CcButtonGroup, CcInput];
 
 const plugins = [CcNotify, CcLoading];
 
@@ -18,6 +19,6 @@ const install = (app: App) => {
   });
 };
 
-export { CcButton, CcButtonGroup, CcNotify, CcLoading, install };
+export { CcButton, CcButtonGroup, CcInput, CcNotify, CcLoading, install };
 
 export default { install };

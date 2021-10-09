@@ -71,10 +71,6 @@ module.exports = {
     },
   },
   devServer: {
-    inline: true,
-    hot: true,
-    publicPath: "/",
-    contentBase: __dirname,
-    overlay: true,
+    port: 3000,
   },
 };
