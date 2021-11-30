@@ -1,0 +1,179 @@
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include b(input) {
+  position: relative;
+  display: flex;
+  width: 100%;
+  line-height: map-get($--input-height, default);
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: $--input-border;
+  border-radius: $--input-border-radius;
+  background: $--input-background-color;
+  font-size: map-get($--input-font-size, default);
+  overflow: hidden;
+
+  @include e(inner) {
+    display: inline-block;
+    flex: 1;
+    color: $--input-font-color;
+    font-size: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $--input-placeholder-font-color;
+    }
+  }
+
+  @include e([suffix, prefix]) {
+    height: 100%;
+    color: $--input-placeholder-font-color;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  @include e(icon) {
+    vertical-align: middle;
+    &:not(:first-child) {
+      padding-left: 6px;
+    }
+  }
+
+  @include e(clickable) {
+    cursor: pointer;
+
+    &:hover {
+      color: $--input-font-color;
+    }
+  }
+
+  @include e([prepend, append]) {
+    color: $--input-font-color;
+    background: $--input-background-color-disabled;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  @include e(prepend) {
+    margin-left: -8px;
+    margin-right: 8px;
+    border-right: $--input-border;
+    //border-top-left-radius: $--input-border-radius;
+    //border-bottom-left-radius: $--input-border-radius;
+  }
+
+  @include e(append) {
+    margin-right: -8px;
+    margin-left: 8px;
+    border-left: $--input-border;
+    //border-top-right-radius: $--input-border-radius;
+    //border-bottom-right-radius: $--input-border-radius;
+  }
+
+  @include e(count) {
+    padding-left: 6px;
+  }
+
+  @each $size in (medium, small, mini) {
+    @include m($size) {
+      height: map-get($--input-height, $size);
+      line-height: map-get($--input-height, $size) - 2px;
+      font-size: map-get($--input-font-size, $size);
+
+      .#{$namespace}-input__icon {
+        font-size: map-get($--input-font-size, $size) + 2px;
+      }
+
+      .#{$namespace}-input__count {
+        font-size: map-get($--input-font-size, $size) - 2px;
+      }
+    }
+  }
+
+  @include when(disabled) {
+    background: $--input-background-color-disabled;
+    color: $--input-font-color-disabled;
+    border-color: $--input-border-color-disabled;
+    cursor: not-allowed;
+    .#{$namespace}-input__inner {
+      pointer-events: none;
+
+      &::placeholder {
+        color: $--input-placeholder-font-color-disabled;
+      }
+    }
+  }
+
+  @include when(hovering) {
+    border-color: $--input-hover-border-color
+  }
+
+  @include when(focused) {
+    border-color: $--input-focus-border-color
+  }
+}
+
+@include b(textarea) {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  @include e(inner) {
+    width: 100%;
+    color: $--input-font-color;
+    font-size: map-get($--input-font-size, default);
+    background: $--input-background-color;
+    line-height: 1.5;
+    border: $--input-border;
+    border-radius: $--input-border-radius;
+    padding: 8px 15px;
+    outline: none;
+    box-sizing: border-box;
+    resize: vertical;
+
+    &::placeholder {
+      color: $--input-placeholder-font-color;
+    }
+
+    &:hover {
+      border-color: $--input-hover-border-color
+    }
+
+    &:focus {
+      border-color: $--input-focus-border-color
+    }
+
+    @include when(counting) {
+      padding-bottom: 15px;
+    }
+  }
+
+  @include e(count) {
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    font-size: map-get($--input-font-size, small);
+    color: $--input-placeholder-font-color;
+    background: $--input-background-color;
+    z-index: 1;
+  }
+
+  @include when(disabled) {
+    .#{$namespace}-textarea__inner {
+      background: $--input-background-color-disabled;
+      color: $--input-font-color-disabled;
+      border-color: $--input-border-color-disabled;
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: $--input-placeholder-font-color-disabled;
+      }
+    }
+  }
+}

@@ -36,7 +36,7 @@
   display: inline-block;
   background: #ffffff;
   font-size: 14px;
-  color: rgba(25, 69, 104, 0.7);
+  color: rgba(25, 69, 104, 0.75);
   font-weight: 400;
   text-align: center;
   line-height: 1;
@@ -3020,7 +3020,7 @@
   cursor: pointer;
 }
 .cc-notification__closeBtn:hover {
-  color: rgba(25, 69, 104, 0.7);
+  color: rgba(25, 69, 104, 0.75);
 }
 
 .cc-notification__icon {
@@ -3131,6 +3131,203 @@
     stroke-dasharray: 90, 150;
     stroke-dashoffset: -120px;
   }
+}
+/* ------------------------ Color ------------------------ */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* ------------------------ Typography ------------------------ */
+/* ------------------------ Border 粗 ------------------------ */
+/* ------------------------ Button ------------------------ */
+/* ------------------------ Input ------------------------ */
+/* ------------------------ Notification ------------------------ */
+/* ------------------------ Loading ------------------------ */
+/* ------------------------ BEM ------------------------ */
+.cc-input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 1px solid #c4c8cb;
+  border-radius: 4px;
+  background: #ffffff;
+  font-size: 14px;
+  overflow: hidden;
+}
+.cc-input__inner {
+  display: inline-block;
+  flex: 1;
+  color: rgba(25, 69, 104, 0.75);
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.cc-input__inner::placeholder {
+  color: rgba(25, 69, 104, 0.3);
+}
+
+.cc-input__suffix, .cc-input__prefix {
+  height: 100%;
+  color: rgba(25, 69, 104, 0.3);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.cc-input__icon {
+  vertical-align: middle;
+}
+.cc-input__icon:not(:first-child) {
+  padding-left: 6px;
+}
+
+.cc-input__clickable {
+  cursor: pointer;
+}
+.cc-input__clickable:hover {
+  color: rgba(25, 69, 104, 0.75);
+}
+
+.cc-input__prepend, .cc-input__append {
+  color: rgba(25, 69, 104, 0.75);
+  background: #e7e7ea;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.cc-input__prepend {
+  margin-left: -8px;
+  margin-right: 8px;
+  border-right: 1px solid #c4c8cb;
+}
+
+.cc-input__append {
+  margin-right: -8px;
+  margin-left: 8px;
+  border-left: 1px solid #c4c8cb;
+}
+
+.cc-input__count {
+  padding-left: 6px;
+}
+
+.cc-input--medium {
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+}
+.cc-input--medium .cc-input__icon {
+  font-size: 16px;
+}
+.cc-input--medium .cc-input__count {
+  font-size: 12px;
+}
+
+.cc-input--small {
+  height: 32px;
+  line-height: 30px;
+  font-size: 13px;
+}
+.cc-input--small .cc-input__icon {
+  font-size: 15px;
+}
+.cc-input--small .cc-input__count {
+  font-size: 11px;
+}
+
+.cc-input--mini {
+  height: 28px;
+  line-height: 26px;
+  font-size: 12px;
+}
+.cc-input--mini .cc-input__icon {
+  font-size: 14px;
+}
+.cc-input--mini .cc-input__count {
+  font-size: 10px;
+}
+
+.cc-input.is-disabled {
+  background: #e7e7ea;
+  color: rgba(25, 69, 104, 0.3);
+  border-color: #d3d6d8;
+  cursor: not-allowed;
+}
+.cc-input.is-disabled .cc-input__inner {
+  pointer-events: none;
+}
+.cc-input.is-disabled .cc-input__inner::placeholder {
+  color: rgba(25, 69, 104, 0.2);
+}
+
+.cc-input.is-hovering {
+  border-color: rgba(25, 69, 104, 0.5);
+}
+
+.cc-input.is-focused {
+  border-color: #5fb7e9;
+}
+
+.cc-textarea {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.cc-textarea__inner {
+  width: 100%;
+  color: rgba(25, 69, 104, 0.75);
+  font-size: 14px;
+  background: #ffffff;
+  line-height: 1.5;
+  border: 1px solid #c4c8cb;
+  border-radius: 4px;
+  padding: 8px 15px;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.cc-textarea__inner::placeholder {
+  color: rgba(25, 69, 104, 0.3);
+}
+.cc-textarea__inner:hover {
+  border-color: rgba(25, 69, 104, 0.5);
+}
+.cc-textarea__inner:focus {
+  border-color: #5fb7e9;
+}
+.cc-textarea__inner.is-counting {
+  padding-bottom: 15px;
+}
+
+.cc-textarea__count {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  font-size: 13px;
+  color: rgba(25, 69, 104, 0.3);
+  background: #ffffff;
+  z-index: 1;
+}
+
+.cc-textarea.is-disabled .cc-textarea__inner {
+  background: #e7e7ea;
+  color: rgba(25, 69, 104, 0.3);
+  border-color: #d3d6d8;
+  cursor: not-allowed;
+}
+.cc-textarea.is-disabled .cc-textarea__inner::placeholder {
+  color: rgba(25, 69, 104, 0.2);
 }
 
 /*# sourceMappingURL=index.css.map */

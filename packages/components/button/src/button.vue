@@ -24,6 +24,7 @@
 </template>
 
 <script lang="ts">
+import { CommonSize } from "@packages/utils/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
 import { validateCommonSize } from "../../../utils/utils";

@@ -16,11 +16,11 @@ $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
 
-$--color-primary-light: mix($--color-white, $--color-primary, 80%) !default;
-$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
-$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
-$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-primary-light: mix($--color-white, $--color-primary, 70%) !default;
+$--color-success-light: mix($--color-white, $--color-success, 70%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 70%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 70%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 70%) !default;
 
 $--color-primary-lighter: mix($--color-white, $--color-primary, 90%) !default;
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
@@ -30,12 +30,26 @@ $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
 // font color
 $--color-text-primary: rgba(25, 69, 104, 1) !default;
-$--color-text-regular: rgba(25, 69, 104, 0.7) !default;
+$--color-text-regular: rgba(25, 69, 104, 0.75) !default;
 $--color-text-secondary: rgba(25, 69, 104, 0.5) !default;
 $--color-text-placeholder: rgba(25, 69, 104, 0.3) !default;
+$--color-text-light: rgba(25, 69, 104, 0.2) !default;
 
+// popup
 $--popup-close-color: $--color-text-secondary !default;
 $--popup-close-hover-color: $--color-text-regular !default;
+
+// border
+$--border-color-base: mix($--color-white, $--color-info, 60%) !default;
+$--border-color-light: mix($--color-white, $--color-info, 70%) !default;
+$--border-color-lighter: mix($--color-white, $--color-info, 80%) !default;
+$--border-color-extra-light: mix($--color-white, $--color-info, 90%) !default;
+
+// disabled
+$--background-color-disabled: mix($--color-white, $--color-dark, 90%) !default;
+$--font-color-disabled: $--color-text-placeholder !default;
+$--border-color-disabled: $--border-color-light !default;
+$--text-placeholder-color-disabled: $--color-text-light !default;
 /* ------------------------ Typography ------------------------ */
 $--font-path: '../theme/fonts' !default;
 
@@ -61,12 +75,6 @@ $--font-weight-bolder: 700 !default;
 
 
 /* ------------------------ Border 粗 ------------------------ */
-// color
-$--border-color-base: mix($--color-white, $--color-info, 60%) !default;
-$--border-color-light: mix($--color-white, $--color-info, 70%) !default;
-$--border-color-lighter: mix($--color-white, $--color-info, 80%) !default;
-$--border-color-extra-light: mix($--color-white, $--color-info, 90%) !default;
-
 // base
 $--border-width-base: 1px !default;
 $--border-width-thick: 2px !default;
@@ -144,7 +152,31 @@ $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
 
 /* ------------------------ Input ------------------------ */
-$--input-height: 40px !default;
+$--input-font-size: (
+        default: $--font-size-base,
+        medium: $--font-size-base,
+        small: $--font-size-small,
+        mini: $--font-size-extra-small
+) !default;
+$--input-height: (
+        default: 40px,
+        medium: 36px,
+        small: 32px,
+        mini: 28px
+) !default;
+$--input-font-color: $--color-text-regular !default;
+$--input-placeholder-font-color: $--color-text-placeholder !default;
+$--input-background-color: $--color-white !default;
+$--input-border: $--border-base !default;
+$--input-border-radius: $--border-radius-base !default;
+$--input-hover-border-color: $--color-text-secondary !default;
+$--input-focus-border-color: $--color-primary-light-3 !default;
+
+$--input-background-color-disabled: $--background-color-disabled !default;
+$--input-font-color-disabled: $--font-color-disabled !default;
+$--input-border-color-disabled: $--border-color-disabled !default;
+$--input-placeholder-font-color-disabled: $--text-placeholder-color-disabled !default;
+
 
 /* ------------------------ Notification ------------------------ */
 $--notification-width: 330px !default;
